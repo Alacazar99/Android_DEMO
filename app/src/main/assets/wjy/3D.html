@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ._area {
+            background-color: pink;
+            height: 250px;
+            width: 1200px;
+            perspective: 3000px;
+            perspective-origin: 599px 146px;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+        
+        .box {
+            height: 150px;
+            width: 300px;
+            background-color: aqua;
+            transform: rotateX(-8deg);
+            transform-style: preserve-3d;
+            transition-duration: 1s;
+            margin: 0 auto;
+        }
+        
+        img {
+            width: 300px;
+            height: 150px;
+            position: absolute;
+            cursor: pointer;
+        }
+        
+        img:nth-child(1) {
+            transform: rotateY(0deg) translateZ(400px);
+        }
+        
+        img:nth-child(2) {
+            transform: rotateY(45deg) translateZ(400px);
+        }
+        
+        img:nth-child(3) {
+            transform: rotateY(90deg) translateZ(400px);
+        }
+        
+        img:nth-child(4) {
+            transform: rotateY(135deg) translateZ(400px);
+        }
+        
+        img:nth-child(5) {
+            transform: rotateY(180deg) translateZ(400px);
+        }
+        
+        img:nth-child(6) {
+            transform: rotateY(225deg) translateZ(400px);
+        }
+        
+        img:nth-child(7) {
+            transform: rotateY(270deg) translateZ(400px);
+        }
+        
+        img:nth-child(8) {
+            transform: rotateY(315deg) translateZ(400px);
+        }
+        
+        ul {
+            list-style: none;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        li {
+            background-color: #000;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            float: left;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="_area">
+        <div class="box">
+            <img src="img/lv.jpg" />
+            <img src="img/lv.jpg" />
+            <img src="img/lv.jpg" />
+            <img src="img/lv.jpg" />
+            <img src="img/lv.jpg" />
+            <img src="img/lv.jpg" />
+            <img src="img/lv.jpg" />
+            <img src="img/lv.jpg" />
+        </div>
+        <ul>
+            <li style="background-color: #666;"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+</body>
+<script type="text/javascript">
+    var x = 0;
+    var index = 0;
+    var timer;
+    var box = document.getElementsByClassName("box")[0];
+    var li = document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+    //滚动函数
+    function roll() {
+        x = x - 45;
+        index = (index == 7) ? 0 : (index + 1);
+        for (var i = 0; i < li.length; i++) {
+            li[i].style.backgroundColor = "#000";
+        }
+        li[index].style.backgroundColor = "#666";
+        box.style.transform = "rotateX(-8deg) rotateY(" + x + "deg)";
+    }
+
+    //切换页面的时候调用(切换页面时本页面还在计时,防止切换页面回来时瞬间快速滚动。)
+    var hiddenProperty = 'hidden' in document ? 'hidden' :
+        'webkitHidden' in document ? 'webkitHidden' :
+        'mozHidden' in document ? 'mozHidden' :
+        null;
+    var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
+    //替换hiddenProperty中的hidden(忽略大小写即Hidden也会被替换形成webkitvisibilitychange)
+    var onVisibilityChange = function() {
+        if (!document[hiddenProperty]) {
+            timer = setInterval(roll, 2000);
+        } else {
+
+            clearInterval(timer);
+        }
+    }
+    document.addEventListener(visibilityChangeEvent, onVisibilityChange);
+
+    //点击图片滚动
+    box.onclick = function() {
+        clearInterval(timer);
+        roll();
+        setTimeout(function() {
+            clearInterval(timer);
+            timer = setInterval(roll, 2000);
+        }, 2000);
+    }
+    timer = setInterval(roll, 2000);
+
+    //点击小圆点滚动
+    for (var i = 0; i < li.length; i++) {
+        li[i].xuhao = i;
+
+        li[i].onclick = function() {
+            clearInterval(timer);
+            for (var i = 0; i < li.length; i++) {
+                li[i].style.backgroundColor = "#000";
+            }
+            li[this.xuhao].style.backgroundColor = "#666";
+            x = x + (index - this.xuhao) * 45;
+            box.style.transform = "rotateX(-8deg) rotateY(" + x + "deg)";
+            index = this.xuhao;
+            setTimeout(function() {
+                clearInterval(timer);
+                timer = setInterval(roll, 2000);
+            }, 2000);
+        }
+    }
+</script>
+
+</html>

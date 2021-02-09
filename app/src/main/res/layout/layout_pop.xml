@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dedede">
+
+<!--    可放置任何控件-->
+
+    <TextView
+        android:id="@+id/tv_good1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="很棒"
+        android:textSize="20sp"
+        android:textColor="#222222"
+        android:gravity="center"
+        android:padding="10dp">
+    </TextView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#000000"></View>
+
+    <TextView
+        android:id="@+id/tv_good2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="还行"
+        android:textSize="20sp"
+        android:textColor="#222222"
+        android:gravity="center"
+        android:padding="10dp">
+    </TextView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#000000"></View>
+    <TextView
+        android:id="@+id/tv_good3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="不太行"
+        android:textSize="20sp"
+        android:textColor="#222222"
+        android:gravity="center"
+        android:padding="10dp">
+    </TextView>
+
+</LinearLayout>

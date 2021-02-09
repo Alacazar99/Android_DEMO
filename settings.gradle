@@ -1,0 +1,4 @@
+rootProject.name='HelloWord'
+include ':app'
+include ':customview'
+include ':customview:nohttptest'

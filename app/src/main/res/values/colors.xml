@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3700B3</color>
+    <color name="titleTextColor">#222222</color>
+    <color name="SubTextColor">#666666</color>
+    <color name="toolBarMenuBgColor">#666666</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="mainColor">#06cd5d</color>
+    <color name="greenColor">#06cd5d</color>
+    <color name="write">#FFFFFF</color>
+    <color name="bg_color">#dedede</color>
+    <color name="tabs_color">#dfdfdf</color>
+    <color name="writeColor">#fefefe</color>
+    <color name="backgroundColor">#dedede</color>
+    <color name="tabHost_text">#1296db</color>
+
+    <color name="toolBarColor">#c6c6c6</color>
+
+    <color name="textColor">#666666</color>
+    <color name="mainContentColor">#666666</color>
+    <color name="goodsPriceColor">#DC143C</color>
+
+</resources>

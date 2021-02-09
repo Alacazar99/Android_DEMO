@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainTestActivity"
+    android:background="@color/backgroundColor"
+   >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/toolBarColor"
+        style="@style/popup_theme"
+        android:theme="@style/toolbar_theme"
+        app:popupTheme="@style/popup_theme"
+        app:title="标题"
+        app:subtitle="子标题"
+        >
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/llTestAnimation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp"
+            >
+            <Button
+                android:id="@+id/btn_ui"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Ui设计练习"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_btn4"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/bannerBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="广告条banner"
+                android:layout_margin="10dp"
+                android:foreground="?selectableItemBackground"
+                android:background="@drawable/bg_btn2"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_categories"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="商品分类"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_btn4"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_SharedPre"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="轻量数据存储"
+                android:layout_margin="10dp"
+                android:background="#06cd5d"
+                android:foreground="?selectableItemBackground"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

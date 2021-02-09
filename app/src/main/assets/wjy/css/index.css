@@ -1,0 +1,254 @@
+/* 
+html:hover {
+    cursor: pointer;
+} */
+
+[v-cloak] {
+    display: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 600px;
+}
+
+.bg {
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* top: 100px;
+    left: 50px; */
+    /* padding-left: 2%; */
+    height: 222px;
+    width: 222px;
+    opacity: .6;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.canvas {
+    padding: 0;
+    margin: 0;
+    z-index: -1;
+    display: none;
+}
+
+.btnbg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.msgs {
+    /* z-index: -1; */
+    opacity: 0.7;
+}
+
+
+/* .msgs::before{
+    content: '';
+   position: absolute;
+   left: 0; right: 0; top: 0; bottom: 0;
+   z-index: -1;
+   opacity: .6;
+} */
+
+.map {
+    position: absolute;
+    width: 222px;
+    height: 222px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../img/heart.png);
+    background-size: 100% 100%;
+    opacity: 1;
+    z-index: 22;
+    animation: rotate2 10s linear infinite;
+}
+
+.map2 {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../img/jt.png);
+    background-size: 100% 100%;
+    opacity: 1.5;
+    z-index: 20;
+    animation: rotate1 10s linear infinite;
+}
+
+.map3 {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../img/lbx.png);
+    background-size: 100% 100%;
+    opacity: 1.1;
+    z-index: -1;
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate1 {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes rotate2 {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.love {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: cadetblue; */
+    /* z-index: 1; */
+    width: 222px;
+    height: 222px;
+    text-align: center;
+}
+
+.Lover {
+    position: absolute;
+    margin: 0 auto;
+    top: 75px;
+    width: 46%;
+    left: 60px;
+    font-weight: bolder;
+    font-size: 36px;
+    color: red;
+    font-size: 36px;
+    z-index: 15;
+    font-family: cursive;
+    opacity: .9;
+}
+
+.color {
+    color: #ddd;
+}
+
+.shadow {
+    text-align: center;
+    /* 背景颜色线性渐变 */
+    /* 老式写法 */
+    /* linear为线性渐变，也可以用下面的那种写法。left top，right top指的是渐变方向，左上到右上 */
+    /* color-stop函数，第一个表示渐变的位置，0为起点，0.5为中点，1为结束点；第二个表示该点的颜色。所以本次渐变为两边灰色，中间渐白色 */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(.4, #4d4d4d), color-stop(.5, white), color-stop(.6, #4d4d4d), color-stop(1, #4d4d4d));
+    /* 新式写法 */
+    /* background: -webkit-linear-gradient(left top, right top, color-stop(0, #4d4d4d), color-stop(.4, #4d4d4d), color-stop(.5, white), color-stop(.6, #4d4d4d), color-stop(1, #4d4d4d)); */
+    /* 设置为text，意思是把文本内容之外的背景给裁剪掉 */
+    -webkit-background-clip: text;
+    /* 设置对象中的文字填充颜色 这里设置为透明 */
+    -webkit-text-fill-color: transparent;
+    /* 每隔2秒调用下面的CSS3动画 infinite属性为循环执行animate */
+    -webkit-animation: animate 1.5s infinite;
+}
+
+
+/* 兼容写法，要放在@keyframes前面 */
+
+@-webkit-keyframes animate {
+    /* 背景从-100px的水平位置，移动到+100px的水平位置。如果要移动Y轴的，设置第二个数值 */
+    from {
+        background-position: -100px;
+    }
+    to {
+        background-position: 100px;
+    }
+}
+
+@keyframes animate {
+    from {
+        background-position: -100px;
+    }
+    to {
+        background-position: 100px;
+    }
+}
+
+.Lover-span {
+    color: #000;
+}
+
+.msg {
+    display: none;
+    position: fixed;
+    text-align: center;
+    margin: center;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 100%;
+    /* background-color: lavender; */
+    font-weight: bolder;
+    font-size: 24px;
+    color: #ffffff;
+    /* z-index: auto; */
+}
+
+.color-span {
+    color: red;
+}
+
+.color-span1 {
+    color: yellow;
+}
+
+.color-span2 {
+    color: yellowgreen;
+}
+
+.color-span3 {
+    color: pink;
+}
+
+.color-span4 {
+    color: chartreuse;
+}
+
+.color-span5 {
+    color: cyan;
+}
+
+.color-span6 {
+    color: blanchedalmond;
+}
+
+.color-span7 {
+    color: red;
+}

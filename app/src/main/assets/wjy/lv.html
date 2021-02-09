@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title></title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body onload="Demo()" class="bg">
+    <div class="map"></div>
+    <div class="map3"></div>
+    <div class="love">
+        <!-- 王佳叶，我想你了，也后悔说和你做朋友了...我该怎么开口和你说呢...这大概是我遇到的最棘手的事啊... -->
+        <marquee class="Lover" behavior="scroll">
+            <span class='color-span'>♥_♥</span>
+            <span class='color'>王佳叶 每天都要开心</span>
+            <span class='color-span'>♥_♥</span>
+            <span class='Lover-span'></span>
+        </marquee>
+    </div>
+    <div class="map2"></div>
+</body>
+
+<script src="js/Bubbles.js"></script>
+<!-- <script src="js/bg.js"></script> -->
+<script type="text/javascript">
+    var MAX = 5;
+    var i = 2;
+
+    // 泡泡颜色
+    function Demo() {
+        CreateBubble();
+        if (++i < MAX) setTimeout(Demo, 3000);
+    }
+
+    // snowStorm.snowColor = 'pink'; //雪花的颜色
+    // snowStorm.flakesMaxActive = 100; //雪花的数量
+    // snowStorm.excludeMobile = false; //ture让iPhone等支持js的手机也能看到雪花
+</script>
+<!-- 3D旋转木马 -->
+
+<!-- 轮动弹幕 -->
+<script type="text/javascript">
+    var btn = document.querySelector('.love');
+    var msg = document.querySelector('.msg');
+    var time = 6;
+
+    function sleep(delay) {
+        var start = (new Date()).getTime();
+        while ((new Date()).getTime() - start < delay) {
+            continue;
+        }
+    }
+    btn.addEventListener('touchstart', function() {
+        // console.log('aaaa');
+        timer = setTimeout(function() {
+            msg.style.behavior = "scroll";
+            msg.style.Direction = 'up'
+            sleep(2000);
+            msg.style.display = 'block';
+        }, 0)
+    });
+    sleep(2500);
+    // msg.style.display = 'block';
+</script>
+</body>
+
+</html>

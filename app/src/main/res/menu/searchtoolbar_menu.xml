@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/search_nomal"
+        android:title="搜索"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/action_settings1"
+        android:icon="@drawable/my_nomal"
+        android:orderInCategory="100"
+        android:title="设置1"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_settings2"
+        android:orderInCategory="100"
+        android:icon="@drawable/setting1"
+        android:title="设置2"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_settings3"
+        android:orderInCategory="100"
+        android:icon="@drawable/kan"
+        android:title="设置3"
+        app:showAsAction="never" />
+</menu>

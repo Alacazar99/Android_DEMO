@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UIActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/uiToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/toolBarColor"
+        app:title="UI布局"
+        app:popupTheme="@style/popup_theme"
+        layout_scrollFlags="scroll|enterAlways"
+        app:logo="@mipmap/ic_launcher"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/btn_Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn2"
+                    android:text="Button按钮"
+                    android:textAllCaps="false"></Button>
+
+                <Button
+                    android:id="@+id/btn_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn4"
+                    android:text="editText按钮"
+                    android:textAllCaps="false"></Button>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/loginButton"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_ImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/bg_btn5"
+                        android:text="ImageView按钮"
+                        android:textAllCaps="false"></Button>
+
+                    <TextView
+                        android:id="@+id/textUserName"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:background="@drawable/bg_btn3"
+                        android:text="账号"></TextView>
+
+                    <TextView
+                        android:id="@+id/textUserPassword"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_btn3"
+                        android:text="密码">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn5"
+                    android:text="Login按钮"
+                    android:textAllCaps="false"></Button>
+
+                <Button
+                    android:id="@+id/btn_RecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn4"
+                    android:text="RecyclerView按钮"
+                    android:textAllCaps="false"></Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_AlertDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn4"
+                    android:text="AlertDialog按钮"
+                    android:textAllCaps="false"></Button>
+
+                <Button
+                    android:id="@+id/btn_toast"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn5"
+                    android:text="Toast按钮"
+                    android:textAllCaps="false"></Button>
+
+                <Button
+                    android:id="@+id/btn_Progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn4"
+                    android:text="Progress按钮"
+                    android:textAllCaps="false"></Button>
+
+                <Button
+                    android:id="@+id/btn_ListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn5"
+                    android:text="ListView按钮"
+                    android:textAllCaps="false"></Button>
+
+                <Button
+                    android:id="@+id/btn_GridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn4"
+                    android:text="GridView按钮"
+                    android:textAllCaps="false"></Button>
+
+                <Button
+                    android:id="@+id/btn_PopUpWindow"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn5"
+                    android:text="PopUpWindow演示"
+                    android:textAllCaps="false"></Button>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical">
+
+        <!-- 水平滚动 -->
+
+        <!--        <HorizontalScrollView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="horizontal"-->
+        <!--                android:padding="20dp">-->
+
+        <!--                <Button-->
+        <!--                    android:layout_width="100dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_margin="10dp"-->
+        <!--                    android:background="@drawable/bg_btn2"></Button>-->
+
+        <!--                <Button-->
+        <!--                    android:layout_width="100dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_margin="10dp"-->
+        <!--                    android:background="@drawable/bg_btn2"></Button>-->
+
+        <!--                <Button-->
+        <!--                    android:layout_width="100dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_margin="10dp"-->
+        <!--                    android:background="@drawable/bg_btn2"></Button>-->
+
+        <!--                <Button-->
+        <!--                    android:layout_width="100dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_margin="10dp"-->
+        <!--                    android:background="@drawable/bg_btn2"></Button>-->
+
+        <!--                <Button-->
+        <!--                    android:layout_width="100dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_margin="10dp"-->
+        <!--                    android:background="@drawable/bg_btn2"></Button>-->
+
+        <!--                <Button-->
+        <!--                    android:layout_width="100dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_margin="10dp"-->
+        <!--                    android:background="@drawable/bg_btn2"></Button>-->
+        <!--            </LinearLayout>-->
+        <!--        </HorizontalScrollView>-->
+
+
+    </LinearLayout>
+</LinearLayout>
+
+

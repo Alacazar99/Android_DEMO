@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HelloWord</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="call_main">黄世祥巨帅！</string>
+    <string name="goodsName">产品名称</string>
+    <string name="goodsDescribe">产品描述:详细内容如下所示...</string>
+    <string name="subTitle">二级标题</string>
+</resources>

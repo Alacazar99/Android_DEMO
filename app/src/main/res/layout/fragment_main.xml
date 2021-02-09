@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#eeeccc"
+    tools:context=".MainFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/toolBarColor"
+            android:theme="@style/toolbar_theme"
+            app:popupTheme="@style/popup_theme"
+            app:title="标题"
+            app:subtitle="子标题">
+        </androidx.appcompat.widget.Toolbar>
+        <!-- TODO: Update blank fragment layout -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/lunboviewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout_editor_absoluteY="0dp"
+                        tools:layout_editor_absoluteX="8dp"/>
+                    <LinearLayout
+                        android:weightSum="10"
+                        android:background="#66222222"
+                        android:orientation="horizontal"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dip">
+                        <TextView
+                            android:layout_weight="7"
+                            android:id="@+id/tv_pager_title"
+                            android:text="这里写标题..."
+                            android:paddingLeft="8dip"
+                            android:gravity="center_vertical"
+                            android:textColor="#ffffff"
+                            android:layout_width="0dp"
+                            android:layout_height="35dip"/>
+                        <!--用来动态添加轮播小点-->
+                        <LinearLayout
+                            android:id="@+id/lineLayout_dot"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/llTestAnimation"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btn_ui"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/bg_btn5"
+                                android:text="Ui设计练习"
+                                android:textAllCaps="false" />
+
+                            <Button
+                                android:id="@+id/btn_banner"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/bg_btn2"
+                                android:foreground="?selectableItemBackground"
+                                android:text="广告条banner"
+                                android:textAllCaps="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btn_event"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/bg_btn5"
+                                android:text="事件监听"
+                                android:textAllCaps="false" />
+
+                            <Button
+                                android:id="@+id/btn_SharedPre"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_margin="10dp"
+                                android:background="#06cd5d"
+                                android:foreground="?selectableItemBackground"
+                                android:text="疫情地图数据可视化"
+                                android:textAllCaps="false" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/imageViewCustom"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/bg_btn5"
+                            android:text="ImageView实现自定义形状"
+                            android:textAllCaps="false" />
+
+                        <Button
+
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            android:background="#06cd5d"
+                            android:foreground="?selectableItemBackground"
+                            android:text="待定..."
+                            android:textAllCaps="false" />
+
+                    </LinearLayout>
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+
+
+<!--                // 瀑布流布局  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMainstaggered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#c0c0c0" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlertDialogActivity"
+    android:orientation="vertical"
+    android:padding="50dp">
+
+    <Button
+        android:id="@+id/btn_dialog1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="文字提问"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_btn5"></Button>
+
+    <Button
+        android:id="@+id/btn_dialog2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="单选提问"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_btn5"></Button>
+    <Button
+        android:id="@+id/btn_dialog3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="单选框"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_btn5"></Button>
+
+    <Button
+        android:id="@+id/btn_dialog4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="多选框"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_btn5"></Button>
+    <Button
+        android:id="@+id/btn_dialog5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="自定义Dialog"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_btn5"></Button>
+
+</LinearLayout>

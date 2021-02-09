@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/bg_progress2</item>
+    </style>
+    <style name="toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <!-- ToolBar样式.-->
+    <style name="toolbar_theme" parent="@style/ThemeOverlay.AppCompat.Light">
+    <!--修改toolbar的Title(大标题)颜色-->
+<!--    <item name="android:textColorPrimary">@android:color/holo_red_dark</item>-->
+<!--    &lt;!&ndash;修改toolbar的subtitle(小标题)颜色&ndash;&gt;-->
+<!--    <item name="subtitleTextColor">@android:color/holo_red_dark</item>-->
+    <!--修改toolbar的图标颜色.-->
+<!--    <item name="colorControlNormal">@android:color/holo_red_dark</item>-->
+    </style>
+        <!-- ToolBar菜单样式.-->
+    <style name="popup_theme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <!--设置背景-->
+        <item name="android:background">@color/toolBarMenuBgColor</item>
+        <!--设置字体颜色-->
+        <item name="android:textColor">@color/titleTextColor</item>
+        <!--设置不覆盖锚点-->
+        <item name="overlapAnchor">false</item>
+    </style>
+</resources>
